@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "checkJs": true,
+    "allowJs": true,
+    "strict": false,
+    "noImplicitAny": false,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "paths": {
+      "@/*": ["./src/*"],
+      "@types/*": ["./src/domain/types/*"] 
+    }
+  },
+  "include": ["src/**/*.js"]
+}

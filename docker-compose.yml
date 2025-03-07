@@ -1,0 +1,41 @@
+version: '3'
+services:
+  node:
+    build: .
+    container_name: node_app
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./:/usr/src/app
+      - /usr/src/app/node_modules
+    depends_on:
+      - postgres
+    env_file:
+      - .env
+    networks:
+      - mynetwork
+    command: npm run dev
+
+  postgres:
+    image: postgres:latest
+    container_name: postgres_db
+    restart: always
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    env_file:
+      - .env
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+    networks:
+      - mynetwork
+
+volumes:
+  pgdata:
+
+networks:
+  mynetwork:
+    driver: bridge
