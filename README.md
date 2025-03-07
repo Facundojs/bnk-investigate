@@ -52,15 +52,6 @@ curl -u $API_KEY_ID:$API_SECRET_KEY https://api.treasuryprime.com/apply/account_
 
 ```
 
-## Visión General de las Transacciones
-
-Las transacciones en Treasury Prime permiten mover fondos entre cuentas utilizando diferentes métodos, tales como:
-
-- **Transferencias ACH**: Permiten transferencias electrónicas entre cuentas bancarias en EE.UU.
-- **Transferencias internas (Book Transfers)**: Movimientos de fondos entre cuentas dentro del mismo banco.
-- **Transferencias por cable (Wire Transfers)**: Transferencias electrónicas rápidas, tanto nacionales como internacionales.
-
-Cada tipo de transacción tiene sus propias características y tiempos de procesamiento. Es esencial seleccionar el tipo adecuado según las necesidades específicas de la operación.
 
 [Referencia: Documentación de Transacciones](https://docs.treasuryprime.com/docs/ach-origination)
 
